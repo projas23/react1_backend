@@ -6,10 +6,11 @@ const cors = require('cors');
 const dotenv = require("dotenv");
 dotenv.config();
 app.use(express.json());
+const PORT = process.env.PORT || 4000;
 
 
 let corspolicy = {
-    origin:"http://localhost:3000"
+    origin: process.env.FrontendURI
 }
 app.use(cors(corspolicy));
 
@@ -58,4 +59,4 @@ app.use('/',allroutes);
 
 
 
-app.listen(4000,()=>{ console.log("Backend server listening at port 4000")});
+app.listen(PORT,()=>{ console.log("Backend server listening")});
