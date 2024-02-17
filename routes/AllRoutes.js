@@ -7,7 +7,7 @@ const upload = multer();
 
 allroutes.get('/',(req,res) => {
     console.log(" reached root");
-    res.send("Welcome to FSD3_backend server");
+    res.send("Welcome to FSD backend server");
 });
 
 
